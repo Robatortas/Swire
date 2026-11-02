@@ -6,17 +6,17 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     @Override
-    public void start(Stage stage) {
+    public void start(Stage stage) throws Exception {
         stage.setTitle("Swire");
+        stage.setWidth(768*2);
+        stage.setHeight(512*2);
+        stage.setResizable(false); // In the meantime.
         stage.show();
-    }
-
-    public static void launchApp(String[] args) {
-        Application.launch(Main.class, args);
+        // throw new UnsupportedOperationException("Unimplemented method 'start'");
     }
 
     public static void main(String[] args) {
         System.out.println("Hello, World!");
-        launchApp(args);
+        Application.launch(args);
     }
 }
