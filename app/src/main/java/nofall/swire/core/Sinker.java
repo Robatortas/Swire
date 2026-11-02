@@ -15,6 +15,8 @@ public class Sinker {
 
     final byte MAX_INPUTS = 4; // Maximum number of input audio streams that can be handled simultaneously.
 
+    private byte currentInputCount = 0; //keeps track of the number of active input streams in the session.
+
     Port[] inputs; // Array of input ports for receiving audio streams.
 
     public Sinker() {
