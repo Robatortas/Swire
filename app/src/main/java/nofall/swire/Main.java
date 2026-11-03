@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class Main extends Application {
 
@@ -22,6 +23,7 @@ public class Main extends Application {
         stage.setMaxWidth(Double.MAX_VALUE);
         stage.setMaxHeight(Double.MAX_VALUE);
         // stage.setResizable(false); // In the meantime.
+        stage.initStyle(StageStyle.UNDECORATED); // Remove OS window decorations (title bar, borders, etc.)
 
         stage.setScene(scene = new Scene(fxml, width, height));
         scene.getStylesheets().add(getClass().getResource("style/swire.css").toExternalForm());
