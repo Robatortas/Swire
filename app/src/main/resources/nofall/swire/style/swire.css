@@ -1,0 +1,19 @@
+/* Color Palette */
+* {
+    -fx-bgColor: #1e1e1e;
+    -fx-ReadableColor: #ffffff;
+}
+
+.root {
+    -fx-background-color: -fx-bgColor;
+}
+
+.menu-bar {
+    -fx-font-size: 20px;
+    -fx-background-color: -fx-ReadableColor, -fx-bgColor;
+    -fx-background-insets: -1px, 0px;
+}
+
+.menu-bar .label {
+    -fx-text-fill: -fx-ReadableColor;
+}

@@ -13,6 +13,8 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         Parent fxml = FXMLLoader.load(getClass().getResource("fx/swire.fxml"));
 
+        Scene scene;
+
         int width = 768*2;
         int height = 512*2;
 
@@ -21,7 +23,8 @@ public class Main extends Application {
         stage.setMaxHeight(Double.MAX_VALUE);
         // stage.setResizable(false); // In the meantime.
 
-        stage.setScene(new Scene(fxml, width, height));
+        stage.setScene(scene = new Scene(fxml, width, height));
+        scene.getStylesheets().add(getClass().getResource("style/swire.css").toExternalForm());
         // new Gui().initialize();
         stage.show();
         // throw new UnsupportedOperationException("Unimplemented method 'start'");
@@ -29,6 +32,7 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         System.out.println("Hello, World!");
+        System.setProperty("glass.win.uiScale", "2.0"); // Force 200% scaling
         Application.launch(args);
     }
 }
